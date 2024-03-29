@@ -1,2 +1,17 @@
-﻿  JustAnotherAdventureGame.cpp
+﻿  Apple.cpp
+  InventoryManager.cpp
+C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\JustAnotherAdventureGame\JustAnotherAdventureGame\String.h(4,1): warning C4005: 'SIZE_MAX': macro redefinition
+  (compiling source file 'InventoryManager.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
+  see previous definition of 'SIZE_MAX'
+  
+  Item.cpp
+  JustAnotherAdventureGame.cpp
+C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\JustAnotherAdventureGame\JustAnotherAdventureGame\String.h(4,1): warning C4005: 'SIZE_MAX': macro redefinition
+  (compiling source file 'JustAnotherAdventureGame.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
+  see previous definition of 'SIZE_MAX'
+  
+C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\JustAnotherAdventureGame\JustAnotherAdventureGame\JustAnotherAdventureGame.cpp(8,17): warning C4101: 'gameManager': unreferenced local variable
+  Generating Code...
   JustAnotherAdventureGame.vcxproj -> C:\Users\Bradon\Documents\My Documents\Visual Studio Projects\AIE\Programming Year 1 - 2024\JustAnotherAdventureGame\x64\Debug\JustAnotherAdventureGame.exe
