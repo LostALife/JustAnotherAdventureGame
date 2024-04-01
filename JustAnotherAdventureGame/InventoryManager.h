@@ -16,6 +16,6 @@ public:
 
 protected:
 private:
-	std::vector<std::unique_ptr<Item>> m_items;
+	std::vector<Item*> m_items;
 };
 

@@ -3,7 +3,7 @@
 
 InventoryManager& InventoryManager::AddNewItem(Item* _item)
 {
-	m_items.emplace_back(_item);
+	m_items.push_back(_item);
 
 	return *this;
 }
