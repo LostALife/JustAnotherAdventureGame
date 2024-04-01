@@ -1,7 +1,7 @@
 #include <iostream>
 #include "InventoryManager.h"
 
-InventoryManager& InventoryManager::AddNewItem(std::unique_ptr<Item> _item)
+InventoryManager& InventoryManager::AddNewItem(Item* _item)
 {
 	m_items.emplace_back(_item);
 

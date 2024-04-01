@@ -50,12 +50,16 @@ Vector2& Vector2::operator=(const int _other)
 {
 	m_x = _other;
 	m_y = _other;
+
+	return *this;
 }
 
 Vector2& Vector2::operator=(const Vector2& _other)
 {
 	m_x = _other.m_x;
 	m_y = _other.m_y;
+
+	return *this;
 }
 
 bool Vector2::operator==(const Vector2& _other)

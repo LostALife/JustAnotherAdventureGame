@@ -1,7 +1,7 @@
 #pragma once
 #include "Item.h"
 
-class ItemApple : Item
+class ItemApple : public Item
 {
 public:
 	ItemApple();

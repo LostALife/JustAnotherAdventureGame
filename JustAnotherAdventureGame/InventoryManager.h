@@ -5,7 +5,7 @@
 class InventoryManager
 {
 public:
-	InventoryManager& AddNewItem(std::unique_ptr<Item> _item);
+	InventoryManager& AddNewItem(Item* _item);
 	InventoryManager& RemoveItem();
 
 	Item& GetItem();

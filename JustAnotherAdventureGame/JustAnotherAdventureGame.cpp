@@ -12,6 +12,6 @@ int main()
 
     ItemApple apple;
 
-    //invManager.AddNewItem(apple);
+    invManager.AddNewItem(&apple);
     invManager.PrintInventoryToConsole();
 }
