@@ -6,7 +6,7 @@ class Room
 {
 public:
 	Room();
-	Room(const String _roomName, const Vector2 _roomPosition, const int _id);
+	Room(const String _roomName, const Vector2 _roomPosition);
 
 public:
 	String getRoomName() {
