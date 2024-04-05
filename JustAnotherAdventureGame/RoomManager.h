@@ -29,8 +29,7 @@ private:
 	std::vector<Room*> m_rooms;
 
 	std::vector<String> m_bossNames = {"Billy", "Gandolf", "Randy", "Oden", "Milly", "Ganon", "Mike Tyson", "Virgil"};
-	std::vector<String> m_roomNames = {"Dungeon", "Basement", "Body Odour Filled Room", "Temple", "Slaughterhouse", "Tomb"};
-
+	std::vector<String> m_roomNames = {"Dungeon", "Basement", "Temple", "Slaughterhouse", "Tomb"};
 
 private:
 	RoomGenParams GenerateNewRoomParameters(const Vector2 _newRoomPosition);

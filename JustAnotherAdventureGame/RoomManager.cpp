@@ -22,8 +22,9 @@ Room* RoomManager::GetRoomAtPosition(const Vector2 _roomPosition)
 // If the generation fails, returns a null pointer.
 Room* RoomManager::GenerateNewRoom(const Vector2 _roomPosition)
 {
-    if (BinarySearchRoomPos(_roomPosition) != nullptr)
-        return nullptr;
+    Room* searchResult = BinarySearchRoomPos(_roomPosition);
+    if (searchResult != nullptr)
+        return searchResult;
 
     RoomGenParams newRoomParams = GenerateNewRoomParameters(_roomPosition);
 
@@ -37,8 +38,9 @@ Room* RoomManager::GenerateNewRoom(const Vector2 _roomPosition)
 // If the generation fails, returns a null pointer.
 Room* RoomManager::GenerateNewRoom(const String _roomName, const Vector2 _roomPosition, const RoomType _roomType, const RoomExits _roomExits)
 {
-    if (BinarySearchRoomPos(_roomPosition) != nullptr)
-        return nullptr;
+    Room* searchResult = BinarySearchRoomPos(_roomPosition);
+    if (searchResult != nullptr)
+        return searchResult;
 
     Room* newRoom = new Room(_roomName, _roomPosition, _roomType, _roomExits);
     m_rooms.push_back(newRoom);
@@ -53,8 +55,6 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
     params.roomPosition = _newRoomPosition;
 
     std::vector<RoomType> possibleRoomTypes;
-
-    GetClosestRoomByType(RoomType::BossChamber, _newRoomPosition, 2);
 
     /*
     Decide roomType:
@@ -145,10 +145,13 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
         int bossName = rand() % m_bossNames.size();
         int roomName = rand() % m_roomNames.size();
 
-        params.roomName = m_bossNames[bossName] + "'s" + m_roomNames[roomName];
+        params.roomName = m_bossNames[bossName] + "'s " + m_roomNames[roomName];
+    }
+    else if (params.roomType == RoomType::ChestRoom) {
+        params.roomName = "Chest Room";
     }
     else {
-        params.roomName = NULL;
+        params.roomName = "blank";
     }
 #pragma endregion
 
@@ -171,26 +174,26 @@ Room* RoomManager::BinarySearchRoomPos(const Vector2 _position)
     });
 
     int minRange = 0;
-    int maxRange = m_rooms.size() - 1;
+    int maxRange = sortedRooms.size() - 1;
     bool itemFound = false;
     while (minRange <= maxRange) {
         int middleRange = (minRange + maxRange) / 2;
-        if (m_rooms[middleRange]->getRoomPosition().m_x == _position.m_x) {
+        if (sortedRooms[middleRange]->getRoomPosition().m_x == _position.m_x) {
             itemFound = true;
             break;
         }
-        else if (m_rooms[middleRange]->getRoomPosition().m_x < _position.m_x) {
+        else if (sortedRooms[middleRange]->getRoomPosition().m_x < _position.m_x) {
             minRange = middleRange + 1;
         }
-        else if (m_rooms[middleRange]->getRoomPosition().m_x > _position.m_x) {
+        else if (sortedRooms[middleRange]->getRoomPosition().m_x > _position.m_x) {
             maxRange = middleRange - 1;
         }
     }
     
     if (itemFound) {
         for (int i = minRange; i <= maxRange; i++) {
-            if (m_rooms[i]->getRoomPosition() == _position) {
-                return m_rooms[i];
+            if (sortedRooms[i]->getRoomPosition() == _position) {
+                return sortedRooms[i];
             }
         }
     }
@@ -214,6 +217,9 @@ Room* RoomManager::GetClosestRoomByType(const RoomType _roomType, Vector2 _searc
         for (int x = searchFrom.m_x; x <= searchTo.m_x; x++) {
             for (int y = searchFrom.m_y; y <= searchTo.m_y; y++) {
                 Room* searchResult = BinarySearchRoomPos(Vector2(x, y));
+
+                if (searchResult == nullptr)
+                    break;
 
                 if (searchResult->getRoomType() == _roomType) {
                     roomsOfType.push_back(searchResult);
