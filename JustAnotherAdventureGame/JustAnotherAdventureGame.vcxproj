@@ -128,10 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ItemApple.cpp" />
-    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="InventoryManager.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="JustAnotherAdventureGame.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="RoomManager.cpp" />
     <ClCompile Include="String.cpp" />
@@ -139,9 +139,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ItemApple.h" />
-    <ClInclude Include="GameManager.h" />
     <ClInclude Include="InventoryManager.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemIncludes.h" />
+    <ClInclude Include="PlayerController.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="RoomManager.h" />
     <ClInclude Include="String.h" />

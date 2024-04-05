@@ -18,4 +18,3 @@ protected:
 private:
 	std::vector<Item*> m_items;
 };
-

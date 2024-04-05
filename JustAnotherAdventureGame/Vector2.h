@@ -1,24 +1,84 @@
 #pragma once
+#include <cmath>
+
 class Vector2
 {
-public:
-	Vector2();
-	Vector2(int _x, int _y);
-
 public:
 	int m_x;
 	int m_y;
 
 public:
-	// Should these first two be references like the others?
-	Vector2 operator+(const int _other);
-	Vector2 operator+(const Vector2& _other);
-	Vector2& operator+=(const int _other);
-	Vector2& operator+=(const Vector2& _other);
-	Vector2& operator=(const int _other);
-	Vector2& operator=(const Vector2& _other);
+	Vector2();
+	Vector2(int _x, int _y);
 
-	bool operator==(const Vector2& _other);
-	bool operator!=(const Vector2& _other);
+public:
+	int Magnitude();
+
+public:
+	Vector2 operator+(const int _other) const {
+		return Vector2(m_x + _other, m_y + _other);
+	}
+
+	Vector2 operator+(const Vector2& _other) const {
+		return Vector2(m_x + _other.m_x, m_y + _other.m_y);
+	}
+
+	Vector2 operator-(const int _other) const {
+		return Vector2(m_x - _other, m_y - _other);
+	}
+
+	Vector2 operator-(const Vector2& _other) const {
+		return Vector2(m_x - _other.m_x, m_y - _other.m_y);
+	}
+
+	Vector2& operator+=(const int _other) {
+		m_x += _other;
+		m_y += _other;
+
+		return *this;
+	}
+
+	Vector2& operator+=(const Vector2& _other) {
+		m_x += _other.m_x;
+		m_y += _other.m_y;
+
+		return *this;
+	}
+
+	Vector2& operator-=(const int _other) {
+		m_x -= _other;
+		m_x -= _other;
+
+		return *this;
+	}
+
+	Vector2& operator-=(const Vector2& _other) {
+		m_x -= _other.m_x;
+		m_y -= _other.m_y;
+
+		return *this;
+	}
+
+	Vector2& operator=(const int _other) {
+		m_x = _other;
+		m_y = _other;
+
+		return *this;
+	}
+
+	Vector2& operator=(const const Vector2& _other) {
+		m_x = _other.m_x;
+		m_y = _other.m_y;
+
+		return *this;
+	}
+
+	bool operator==(const Vector2& _other) const {
+		return m_x == _other.m_x && m_y == _other.m_y;
+	}
+
+	bool operator!=(const Vector2& _other) const {
+		return m_x != _other.m_x && m_y != _other.m_y;
+	}
 };
 

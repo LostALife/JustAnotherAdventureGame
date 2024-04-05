@@ -1,24 +1,24 @@
 #pragma once
 #include <iostream>
-#include "GameManager.h"
 #include "InventoryManager.h"
 #include "RoomManager.h"
 #include "Vector2.h"
-#include "Item.h"
+#include "ItemIncludes.h"
 
-#include "ItemApple.h";
+Room* spawnRoom = nullptr;
+
+void CreateSpawnRoom(RoomManager& _roomManager);
 
 int main()
 {
-	GameManager gameManager;
 	InventoryManager invManager;
 	RoomManager roomManager;
 
-	/*ItemApple apple;
+	CreateSpawnRoom(roomManager);
+}
 
-	invManager.AddNewItem(&apple);
-	invManager.PrintInventoryToConsole();*/
-
-	Room foundRoom = roomManager.GetRoomAtPosition(Vector2(0, 0));
-	std::cout << foundRoom.getRoomName().CStr() << std::endl;
+// If no spawn room exists, creates one and returns its pointer. 
+// Otherwise, returns nullptr.
+void CreateSpawnRoom(RoomManager& _roomManager) {
+	spawnRoom = _roomManager.GenerateNewRoom("Spawn", Vector2(0,0), RoomType::Normal, RoomExits{true,true,true,true});
 }
