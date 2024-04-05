@@ -29,28 +29,52 @@ void GameManager::BeginGameLoop()
 		playerInput.ReadFromConsole();
 
 		if (playerInput.ToLower() == "move up") {
-			Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(0, 1));
-			if (result != nullptr)
-				m_currentRoom = result;
-			system("CLS");
+			if (m_currentRoom->getRoomExits().up) {
+				Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(0, 1));
+				if (result != nullptr)
+					m_currentRoom = result;
+				system("CLS");
+			}
+			else {
+				std::cout << "There is no exit here..." << std::endl << std::endl;
+				goto readInput;
+			}
 		} 
 		else if (playerInput.ToLower() == "move right") {
-			Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(1, 0));
-			if (result != nullptr)
-				m_currentRoom = result;
-			system("CLS");
+			if (m_currentRoom->getRoomExits().right) {
+				Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(1, 0));
+				if (result != nullptr)
+					m_currentRoom = result;
+				system("CLS");
+			}
+			else {
+				std::cout << "There is no exit here..." << std::endl << std::endl;
+				goto readInput;
+			}
 		}
 		else if (playerInput.ToLower() == "move down") {
-			Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(0, -1));
-			if (result != nullptr)
-				m_currentRoom = result;
-			system("CLS");
+			if (m_currentRoom->getRoomExits().down) {
+				Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(0, -1));
+				if (result != nullptr)
+					m_currentRoom = result;
+				system("CLS");
+			}
+			else {
+				std::cout << "There is no exit here..." << std::endl << std::endl;
+				goto readInput;
+			}
 		}
 		else if (playerInput.ToLower() == "move left") {
-			Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(-1, 0));
-			if (result != nullptr)
-				m_currentRoom = result;
-			system("CLS");
+			if (m_currentRoom->getRoomExits().left) {
+				Room* result = m_roomManager->GenerateNewRoom(m_currentRoom->getRoomPosition() + Vector2(-1, 0));
+				if (result != nullptr)
+					m_currentRoom = result;
+				system("CLS");
+			}
+			else {
+				std::cout << "There is no exit here..." << std::endl << std::endl;
+				goto readInput;
+			}
 		}
 		else if (playerInput.ToLower() == "help") {
 			system("CLS");
@@ -76,6 +100,20 @@ void GameManager::CreateSpawnRoom()
 
 void GameManager::PrintRoomInfo()
 {
+	Vector2 roomPos = m_currentRoom->getRoomPosition();
+	RoomExits roomExits = m_currentRoom->getRoomExits();
+
 	std::cout << "Room: " << m_currentRoom->getRoomName().CStr() <<
-		" (" << m_currentRoom->getRoomPosition().m_x << " " << m_currentRoom->getRoomPosition().m_y << ")" << std::endl << std::endl;
+		" (" << roomPos.m_x << " " << roomPos.m_y << ")" << std::endl;
+
+	std::cout << "Available Exits:" << std::endl;
+	if (roomExits.up)
+		std::cout << "Up" << std::endl;
+	if (roomExits.down)
+		std::cout << "Down" << std::endl;
+	if (roomExits.left)
+		std::cout << "Left" << std::endl;
+	if (roomExits.right)
+		std::cout << "Right" << std::endl;
+	std::cout << std::endl;
 }

@@ -94,6 +94,7 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
     if (foundRoom == nullptr)
         possibleRoomTypes.push_back(RoomType::BossChamber);
 
+    srand(time(NULL));
     int randIndex = std::rand() % possibleRoomTypes.size();
     params.roomType = possibleRoomTypes[randIndex];
 #pragma endregion
@@ -142,7 +143,9 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
 
 #pragma region RoomName
     if (params.roomType == RoomType::BossChamber) {
+        srand(time(NULL));
         int bossName = rand() % m_bossNames.size();
+        srand(time(NULL));
         int roomName = rand() % m_roomNames.size();
 
         params.roomName = m_bossNames[bossName] + "'s " + m_roomNames[roomName];
@@ -232,7 +235,7 @@ Room* RoomManager::GetClosestRoomByType(const RoomType _roomType, Vector2 _searc
             if (closestRoom == nullptr) {
                 closestRoom = roomsOfType[i];
             }
-            else if (roomsOfType[i]->getRoomPosition().Magnitude() < closestRoom->getRoomPosition().Magnitude()) {
+            else if ((roomsOfType[i]->getRoomPosition() - closestRoom->getRoomPosition()).Magnitude()) {
                 closestRoom = roomsOfType[i];
             }
         }

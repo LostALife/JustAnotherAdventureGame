@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <ctime>
 #include <algorithm>
 #include "Vector2.h"
 #include "String.h"

@@ -1,10 +1,14 @@
-﻿  GameManager.cpp
+﻿  RoomManager.cpp
 C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\Vector2.h(69,27): warning C4114: same type qualifier used more than once
-  (compiling source file 'GameManager.cpp')
+  (compiling source file 'RoomManager.cpp')
   
 C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\String.h(4,1): warning C4005: 'SIZE_MAX': macro redefinition
-  (compiling source file 'GameManager.cpp')
+  (compiling source file 'RoomManager.cpp')
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
   see previous definition of 'SIZE_MAX'
   
+C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\RoomManager.cpp(97,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\RoomManager.cpp(146,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\RoomManager.cpp(148,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\RoomManager.cpp(180,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   JustAnotherAdventureGame.vcxproj -> C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\x64\Debug\JustAnotherAdventureGame.exe
