@@ -14,6 +14,10 @@ public:
 public:
 	int Magnitude();
 
+	static int Distance(Vector2 a, Vector2 b) {
+		return (a - b).Magnitude();
+	}
+
 public:
 	Vector2 operator+(const int _other) const {
 		return Vector2(m_x + _other, m_y + _other);

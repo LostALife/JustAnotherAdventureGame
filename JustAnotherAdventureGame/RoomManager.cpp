@@ -110,7 +110,12 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
             params.roomExits.up = true;
     }
     else {
-        params.roomExits.up = std::rand() % 2;
+        if (params.roomType == RoomType::Branch) {
+            params.roomExits.up = true;
+        }
+        else {
+            params.roomExits.up = std::rand() % 2;
+        }
     }
 
     foundRoom = BinarySearchRoomPos(_newRoomPosition + Vector2(1, 0));
@@ -119,7 +124,12 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
             params.roomExits.right = true;
     }
     else {
-        params.roomExits.right = std::rand() % 2;
+        if (params.roomType == RoomType::Branch) {
+            params.roomExits.right = true;
+        }
+        else {
+            params.roomExits.right = std::rand() % 2;
+        }
     }
 
     foundRoom = BinarySearchRoomPos(_newRoomPosition + Vector2(0, -1));
@@ -128,7 +138,12 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
             params.roomExits.down = true;
     }
     else {
-        params.roomExits.down = std::rand() % 2;
+        if (params.roomType == RoomType::Branch) {
+            params.roomExits.down = true;
+        }
+        else {
+            params.roomExits.down = std::rand() % 2;
+        }
     }
 
     foundRoom = BinarySearchRoomPos(_newRoomPosition + Vector2(-1, 0));
@@ -137,7 +152,12 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
             params.roomExits.left = true;
     }
     else {
-        params.roomExits.left = std::rand() % 2;
+        if (params.roomType == RoomType::Branch) {
+            params.roomExits.left = true;
+        }
+        else {
+            params.roomExits.left = std::rand() % 2;
+        }
     }
 #pragma endregion
 
@@ -153,8 +173,11 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
     else if (params.roomType == RoomType::ChestRoom) {
         params.roomName = "Chest Room";
     }
+    else if (params.roomType == RoomType::Branch) {
+        params.roomName = "Branch Room";
+    }
     else {
-        params.roomName = "blank";
+        params.roomName = "Regular Room";
     }
 #pragma endregion
 
@@ -210,33 +233,25 @@ Room* RoomManager::GetClosestRoomByType(const RoomType _roomType, Vector2 _searc
 {
     Room* closestRoom = nullptr;
 
-    for (int i = 0; i <= _searchDistance; i++) {
-        Vector2 searchFrom = _searchFrom - i;
-        Vector2 searchTo = _searchFrom + i;
+    Vector2 searchFrom = _searchFrom - _searchDistance;
+    Vector2 searchTo = _searchFrom + _searchDistance;
 
-        std::vector<Room*> roomsOfType;
+    for (int x = searchFrom.m_x; x <= searchTo.m_x; x++) {
+        for (int y = searchFrom.m_y; y <= searchTo.m_y; y++) {
+            Room* searchResult = BinarySearchRoomPos(Vector2(x, y));
 
-        // Find all rooms with type _roomType and store in roomsOfType.
-        for (int x = searchFrom.m_x; x <= searchTo.m_x; x++) {
-            for (int y = searchFrom.m_y; y <= searchTo.m_y; y++) {
-                Room* searchResult = BinarySearchRoomPos(Vector2(x, y));
+            if (searchResult == nullptr || searchResult->getRoomType() != _roomType)
+                continue;
 
-                if (searchResult == nullptr)
-                    break;
-
-                if (searchResult->getRoomType() == _roomType) {
-                    roomsOfType.push_back(searchResult);
-                }
-            }
-        }
-
-        // Go through all previously found rooms and check if it is the closest.
-        for (int i = 0; i < roomsOfType.size(); i++) {
             if (closestRoom == nullptr) {
-                closestRoom = roomsOfType[i];
+                closestRoom = searchResult;
             }
-            else if ((roomsOfType[i]->getRoomPosition() - closestRoom->getRoomPosition()).Magnitude()) {
-                closestRoom = roomsOfType[i];
+            else {
+                int distanceToCurrent = Vector2::Distance(_searchFrom, closestRoom->getRoomPosition());
+                int distanceToNew = Vector2::Distance(_searchFrom, searchResult->getRoomPosition());
+
+                if (distanceToNew < distanceToCurrent)
+                    closestRoom = searchResult;
             }
         }
     }

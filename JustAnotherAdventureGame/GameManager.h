@@ -1,5 +1,6 @@
 #pragma once
 #include "RoomManager.h"
+#include "InventoryManager.h"
 
 class GameManager
 {
@@ -13,6 +14,7 @@ public:
 protected:
 private:
 	RoomManager* m_roomManager;
+	InventoryManager* m_invManager;
 
 	Room* m_spawnRoom;
 	Room* m_currentRoom;

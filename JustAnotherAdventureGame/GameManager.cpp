@@ -5,6 +5,8 @@
 GameManager::GameManager()
 {
 	m_roomManager = new RoomManager();
+	m_invManager = new InventoryManager();
+
 	CreateSpawnRoom();
 	m_currentRoom = m_spawnRoom;
 }
@@ -12,6 +14,7 @@ GameManager::GameManager()
 GameManager::~GameManager()
 {
 	delete m_roomManager;
+	delete m_invManager;
 }
 
 void GameManager::BeginGameLoop()
@@ -20,6 +23,7 @@ void GameManager::BeginGameLoop()
 
 	// BAD PRACTICE GO BRRRRR
 	while (true) {
+		system("CLS");
 		PrintRoomInfo();
 
 		std::cout << "Enter a command or type 'Help' for a list of commands." << std::endl << std::endl;
