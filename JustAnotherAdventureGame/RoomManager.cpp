@@ -1,12 +1,18 @@
 #include "RoomManager.h"
 
+RoomManager::RoomManager()
+{
+}
+
+RoomManager::RoomManager(const RoomManager& _other)
+{
+}
+
 RoomManager::~RoomManager()
 {
     for (int i = 0; i < m_rooms.size(); i++) {
         delete m_rooms[i];
     }
-
-    m_rooms.clear();
 }
 
 // Gets the Room at the specified position.
@@ -28,7 +34,7 @@ Room* RoomManager::GenerateNewRoom(const Vector2 _roomPosition)
 
     RoomGenParams newRoomParams = GenerateNewRoomParameters(_roomPosition);
 
-    Room* newRoom = new Room(newRoomParams.roomName, newRoomParams.roomPosition, newRoomParams.roomType, newRoomParams.roomExits);
+    Room* newRoom = new Room(newRoomParams.roomName, newRoomParams.roomPosition, newRoomParams.roomType, newRoomParams.roomExits, newRoomParams.roomItems);
     m_rooms.push_back(newRoom);
 
     return newRoom;
@@ -36,13 +42,13 @@ Room* RoomManager::GenerateNewRoom(const Vector2 _roomPosition)
 
 // Generate a new room at the specified position. If a room already exists at _roomPosition, returns its pointer.
 // If the generation fails, returns a null pointer.
-Room* RoomManager::GenerateNewRoom(const String _roomName, const Vector2 _roomPosition, const RoomType _roomType, const RoomExits _roomExits)
+Room* RoomManager::GenerateNewRoom(const String _roomName, const Vector2 _roomPosition, const RoomType _roomType, const RoomExits _roomExits, const std::vector<Item*>& _roomItems)
 {
     Room* searchResult = BinarySearchRoomPos(_roomPosition);
     if (searchResult != nullptr)
         return searchResult;
 
-    Room* newRoom = new Room(_roomName, _roomPosition, _roomType, _roomExits);
+    Room* newRoom = new Room(_roomName, _roomPosition, _roomType, _roomExits, _roomItems);
     m_rooms.push_back(newRoom);
 
     return newRoom;
@@ -55,23 +61,6 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
     params.roomPosition = _newRoomPosition;
 
     std::vector<RoomType> possibleRoomTypes;
-
-    /*
-    Decide roomType:
-        Check distance from other rooms of each type.
-        Decide depending on how close another room of the same type is.
-
-        E.g. Don't make two boss rooms next to each other, but if the closest boss room is 20 rooms away, 
-        randomly decide whether to make this room a boss room.
-
-    Decide roomExits:
-        Base this decision on whether the rooms around it have an exit pointing to it.
-        Add additional exits randomly where no adjacent rooms are spawned.
-
-    Decide roomName:
-        Decide the room name based on the roomType with a few lists of preditermined strings that can be concatenated
-        to make an interesting name.
-    */
 
 #pragma region RoomType
     // Add the Normal room type by default.
@@ -180,6 +169,18 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
         params.roomName = "Regular Room";
     }
 #pragma endregion
+
+#pragma region RoomItems
+    srand(time(NULL));
+    int numberOfItems = rand() % 4;
+
+    ItemLibrary itemLibrary;
+    for (int i = 0; i < numberOfItems; i++) {
+        Item* newItem = new Item(itemLibrary.GetRandomItem());
+        params.roomItems.push_back(newItem);
+    }
+#pragma endregion
+
 
     return params;
 }

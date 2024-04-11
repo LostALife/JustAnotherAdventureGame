@@ -7,14 +7,4 @@ C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
   see previous definition of 'SIZE_MAX'
   
-  JustAnotherAdventureGame.cpp
-C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\Vector2.h(73,27): warning C4114: same type qualifier used more than once
-  (compiling source file 'JustAnotherAdventureGame.cpp')
-  
-C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\JustAnotherAdventureGame\String.h(4,1): warning C4005: 'SIZE_MAX': macro redefinition
-  (compiling source file 'JustAnotherAdventureGame.cpp')
-  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\limits.h(64,1):
-  see previous definition of 'SIZE_MAX'
-  
-  Generating Code...
   JustAnotherAdventureGame.vcxproj -> C:\Users\Bradon\Documents\My Documents\AIE\Advanced Diploma in Game Development\Year 1\Introduction to C++\Visual Studio Projects\JustAnotherAdventureGame\x64\Debug\JustAnotherAdventureGame.exe

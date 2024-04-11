@@ -99,25 +99,35 @@ void GameManager::BeginGameLoop()
 // Otherwise, returns nullptr.
 void GameManager::CreateSpawnRoom()
 {
-	m_spawnRoom = m_roomManager->GenerateNewRoom("Spawn", Vector2(0, 0), RoomType::Normal, RoomExits{ true,true,true,true });
+	m_spawnRoom = m_roomManager->GenerateNewRoom("Spawn", Vector2(0, 0), RoomType::Normal, RoomExits{ true,true,true,true }, std::vector<Item*>());
 }
 
 void GameManager::PrintRoomInfo()
 {
 	Vector2 roomPos = m_currentRoom->getRoomPosition();
 	RoomExits roomExits = m_currentRoom->getRoomExits();
+	std::vector<Item*> roomItems = m_currentRoom->getRoomItems();
 
 	std::cout << "Room: " << m_currentRoom->getRoomName().CStr() <<
-		" (" << roomPos.m_x << " " << roomPos.m_y << ")" << std::endl;
+		" (" << roomPos.m_x << " " << roomPos.m_y << ")" << '\n';
 
-	std::cout << "Available Exits:" << std::endl;
+	std::cout << "\nRoom Items: ";
+	for (int i = 0; i < roomItems.size(); i++) {
+		std::cout << roomItems[i]->getDisplayName().CStr();
+
+		if (i < roomItems.size() - 1)
+			std::cout << ", ";
+	}
+	std::cout << '\n';
+
+	std::cout << "\nAvailable Exits:" << std::endl;
 	if (roomExits.up)
-		std::cout << "Up" << std::endl;
+		std::cout << "Up\n";
 	if (roomExits.down)
-		std::cout << "Down" << std::endl;
+		std::cout << "Down\n";
 	if (roomExits.left)
-		std::cout << "Left" << std::endl;
+		std::cout << "Left\n";
 	if (roomExits.right)
-		std::cout << "Right" << std::endl;
+		std::cout << "Right\n";
 	std::cout << std::endl;
 }

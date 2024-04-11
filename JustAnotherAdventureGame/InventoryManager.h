@@ -2,19 +2,36 @@
 #include <vector>
 #include "Item.h"
 
+struct InventoryItem {
+	Item* item;
+	int countInInventory = 0;
+
+	bool operator==(const InventoryItem& _other) {
+		return item == _other.item && countInInventory == _other.countInInventory;
+	}
+
+	bool operator!=(const InventoryItem& _other) {
+		return item != _other.item && countInInventory != _other.countInInventory;
+	}
+};
+
 class InventoryManager
 {
 public:
-	InventoryManager& AddNewItem(Item* _item);
-	InventoryManager& RemoveItem();
+	~InventoryManager();
 
-	Item& GetItem();
-
-	InventoryManager& EqualTo(const Item& _other);
+public:
+	InventoryManager& AddNewItem(InventoryItem* _item);
+	InventoryManager& AddRandomItem();
+	InventoryManager& RemoveItem(const Item& _item, const unsigned int _numToRemove);
 
 	InventoryManager& PrintInventoryToConsole();
 
 protected:
 private:
-	std::vector<Item*> m_items;
+	std::vector<InventoryItem*> m_items;
+
+private:
+	InventoryItem* GetInventoryItem(const Item& _item);
+	InventoryItem* GetInventoryItem(const InventoryItem& _item);
 };
