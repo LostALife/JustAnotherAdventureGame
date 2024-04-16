@@ -2,10 +2,10 @@
 #include <cstring>
 #include <cctype>
 #include <iostream>
+#include <sstream>
 
-String::String() : m_str(nullptr), m_length(0), m_capacity(0)
+String::String() : String("")
 {
-
 }
 
 String::String(const char* _str)
@@ -38,7 +38,7 @@ size_t String::Length() const
 // Get the character at index.
 char String::CharacterAt(size_t _index)
 {
-	if (_index > 0 && _index < m_length) {
+	if (_index >= 0 && _index < m_length) {
 		return m_str[_index];
 	}
 	else {
@@ -48,7 +48,7 @@ char String::CharacterAt(size_t _index)
 
 const char String::CharacterAt(size_t _index) const
 {
-	if (_index > 0 && _index < m_length) {
+	if (_index >= 0 && _index < m_length) {
 		return m_str[_index];
 	}
 	else {
@@ -128,6 +128,53 @@ String& String::ToUpper()
 	return *this;
 }
 
+///<summary>Trims whiespaces off the beginning and end of the string.</summary>
+String& String::Trim()
+{
+	int firstNonSpace = 0;
+	int lastNonSpace = 0;
+
+	// Find first character in string that is not a whitespace.
+	for (int i = 0; i <= m_length; i++) {
+		if (CharacterAt(i) != ' ') {
+			firstNonSpace = i;
+			break;
+		}
+	}
+
+	// Find last character in string that is not a whitespace.
+	for (int i = m_length - 1; i > 0; i--) {
+		if (CharacterAt(i) != ' ') {
+			lastNonSpace = i;
+			break;
+		}
+	}
+
+	if (firstNonSpace == 0 && lastNonSpace == m_length - 1)
+		return *this;
+
+	String temp = *this;
+
+	m_length = lastNonSpace - firstNonSpace + 1;
+	m_capacity = m_length + 1;
+	m_str = new char[m_capacity];
+	memcpy_s(m_str, m_capacity, temp.CStr() + firstNonSpace, m_length);
+	m_str[m_length] = '\0';
+
+	return *this;
+}
+
+int String::StringToInt()
+{
+	std::stringstream ss;
+	ss.str(m_str);
+
+	int result = NULL;
+	ss >> result;
+
+	return result;
+}
+
 // Find a substring in m_str.
 size_t String::Find(const String& _str)
 {
@@ -137,7 +184,7 @@ size_t String::Find(const String& _str)
 }
 
 // Find a substring in m_str starting from an index.
-size_t String::Find(size_t _startIndex, const String& _str)
+size_t String::Find(const size_t _startIndex, const String& _str)
 {
 	for (size_t i = _startIndex; i < m_length - _str.m_length; i++) {
 		if (strncmp(m_str + i, _str.m_str, _str.m_length) == 0) {
@@ -148,7 +195,7 @@ size_t String::Find(size_t _startIndex, const String& _str)
 	return -1;
 }
 
-// Replace a substring in m_str.
+// Replace the first instance of a substring in the string.
 String& String::Replace(const String& _find, const String& _replace)
 {
 	size_t subStrIndex = Find(_find);

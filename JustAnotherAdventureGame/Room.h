@@ -28,6 +28,10 @@ public:
 	~Room();
 
 public:
+	Room& AddItem(const Item& _item);
+	Room& RemoveItem(const Item& _item);
+
+public:
 	String getRoomName() {
 		return m_roomName;
 	}
@@ -40,7 +44,7 @@ public:
 	RoomExits getRoomExits() {
 		return m_roomExits;
 	}
-	std::vector<Item*> getRoomItems() {
+	const std::vector<Item*> getRoomItems() {
 		return m_roomItems;
 	}
 

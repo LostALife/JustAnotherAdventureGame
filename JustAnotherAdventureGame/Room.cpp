@@ -18,6 +18,26 @@ Room::~Room()
 	for (int i = 0; i < m_roomItems.size(); i++) {
 		delete m_roomItems[i];
 	}
+}
 
-	m_roomItems.clear();
+Room& Room::AddItem(const Item& _item)
+{
+	Item* newItem = new Item(_item);
+	m_roomItems.push_back(newItem);
+
+	return *this;
+}
+
+Room& Room::RemoveItem(const Item& _item)
+{
+	for (int i = 0; i < m_roomItems.size(); i++) {
+		if (*m_roomItems[i] == _item) {
+			delete m_roomItems[i];
+			m_roomItems.erase(m_roomItems.begin() + i);
+
+			break;
+		}
+	}
+
+	return *this;
 }

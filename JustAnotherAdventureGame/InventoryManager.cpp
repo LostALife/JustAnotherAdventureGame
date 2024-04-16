@@ -9,16 +9,26 @@ InventoryManager::~InventoryManager()
 	}
 }
 
-// Adds a new item to the inventory.
-InventoryManager& InventoryManager::AddNewItem(InventoryItem* _item)
+const std::vector<InventoryItem*> InventoryManager::getInventoryList()
 {
-	InventoryItem* searchResult = GetInventoryItem(*_item);
+	std::vector<InventoryItem*> returnList;
+	for (int i = 0; i < m_items.size(); i++) {
+		if (m_items[i]->countInInventory > 0)
+			returnList.push_back(m_items[i]);
+	}
+
+	return returnList;
+}
+
+// Adds a new item to the inventory.
+InventoryManager& InventoryManager::AddNewItem(const InventoryItem& _inventoryItem)
+{
+	InventoryItem* searchResult = GetInventoryItem(*_inventoryItem.item);
 	if (searchResult == nullptr) {
-		InventoryItem newInventoryItem = { new Item(*_item->item), 1};
-		m_items.push_back(&newInventoryItem);
+		m_items.push_back(new InventoryItem(_inventoryItem));
 	}
 	else {
-		searchResult->countInInventory += 1;
+		searchResult->countInInventory += _inventoryItem.countInInventory;
 	}
 
 	return *this;
@@ -32,7 +42,7 @@ InventoryManager& InventoryManager::AddRandomItem()
 
 	InventoryItem* searchResult = GetInventoryItem(newItem);
 	if (searchResult == nullptr) {
-		InventoryItem newInventoryItem = { &newItem, 1 };
+		InventoryItem newInventoryItem = InventoryItem(newItem, 1);
 		m_items.push_back(&newInventoryItem);
 	}
 	else {
@@ -43,7 +53,7 @@ InventoryManager& InventoryManager::AddRandomItem()
 }
 
 // Removes one or more of an item from the inventory.
-// Attempting to remove move of an item than exists in the inventory removes all of the specified item from the inventory.
+// Attempting to remove more of an item than exists in the inventory removes all of the specified item from the inventory.
 InventoryManager& InventoryManager::RemoveItem(const Item& _item, const unsigned int _numToRemove)
 {
 	InventoryItem* searchResult = GetInventoryItem(_item);
@@ -73,18 +83,6 @@ InventoryItem* InventoryManager::GetInventoryItem(const Item& _item)
 	return nullptr;
 }
 
-// Searches for an InventoryItem in inventory. Returns nullptr if not found.
-InventoryItem* InventoryManager::GetInventoryItem(const InventoryItem& _item)
-{
-	for (int i = 0; i < m_items.size(); i++) {
-		if (*m_items[i] == _item) {
-			return m_items[i];
-		}
-	}
-
-	return nullptr;
-}
-
 // Prints a list of the inventory contents to console.
 InventoryManager& InventoryManager::PrintInventoryToConsole()
 {
@@ -93,4 +91,21 @@ InventoryManager& InventoryManager::PrintInventoryToConsole()
 	}
 
 	return *this;
+}
+
+InventoryItem::InventoryItem(const Item& _other, const unsigned int _count)
+{
+	item = new Item(_other);
+	countInInventory = _count;
+}
+
+InventoryItem::InventoryItem(const InventoryItem& _inventoryItem)
+{
+	item = new Item(*_inventoryItem.item);
+	countInInventory = _inventoryItem.countInInventory;
+}
+
+InventoryItem::~InventoryItem()
+{
+	delete item;
 }
