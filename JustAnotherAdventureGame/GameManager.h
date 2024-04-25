@@ -31,6 +31,8 @@ private:
 	Room* m_spawnRoom;
 	Room* m_currentRoom;
 
+	bool m_canExitRoom;
+
 private:
 	void CreateSpawnRoom();
 
@@ -40,5 +42,6 @@ private:
 	void PrintRoomInfo();
 	void PrintCommands();
 	void PrintAndHandlePickup();
-	void PrintAndHandleDrop();
+	void PrintAndHandleInventory();
+	void PrintItemOptions(const int _inventoryItemIndex);
 };

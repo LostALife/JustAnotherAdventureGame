@@ -2,10 +2,12 @@
 
 RoomManager::RoomManager()
 {
+    srand(time(NULL));
 }
 
 RoomManager::RoomManager(const RoomManager& _other)
 {
+    srand(time(NULL));
 }
 
 RoomManager::~RoomManager()
@@ -83,7 +85,6 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
     if (foundRoom == nullptr)
         possibleRoomTypes.push_back(RoomType::BossChamber);
 
-    srand(time(NULL));
     int randIndex = std::rand() % possibleRoomTypes.size();
     params.roomType = possibleRoomTypes[randIndex];
 #pragma endregion
@@ -171,16 +172,15 @@ RoomGenParams RoomManager::GenerateNewRoomParameters(const Vector2 _newRoomPosit
 #pragma endregion
 
 #pragma region RoomItems
-    srand(time(NULL));
     int numberOfItems = rand() % 4;
 
     ItemLibrary itemLibrary;
     for (int i = 0; i < numberOfItems; i++) {
-        Item* newItem = new Item(itemLibrary.GetRandomItem());
+        // Is this causing object slicing? Makes it so the overriden Use doesn't work?
+        Item* newItem = itemLibrary.GetRandomItem();
         params.roomItems.push_back(newItem);
     }
 #pragma endregion
-
 
     return params;
 }

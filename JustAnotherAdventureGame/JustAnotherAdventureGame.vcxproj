@@ -131,7 +131,9 @@
     <ClCompile Include="ItemApple.cpp" />
     <ClCompile Include="InventoryManager.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemDonut.cpp" />
     <ClCompile Include="ItemLibrary.cpp" />
+    <ClCompile Include="ItemSword.cpp" />
     <ClCompile Include="JustAnotherAdventureGame.cpp" />
     <ClCompile Include="Room.cpp" />
     <ClCompile Include="RoomManager.cpp" />
@@ -143,7 +145,9 @@
     <ClInclude Include="ItemApple.h" />
     <ClInclude Include="InventoryManager.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemDonut.h" />
     <ClInclude Include="ItemLibrary.h" />
+    <ClInclude Include="ItemSword.h" />
     <ClInclude Include="Room.h" />
     <ClInclude Include="RoomManager.h" />
     <ClInclude Include="String.h" />

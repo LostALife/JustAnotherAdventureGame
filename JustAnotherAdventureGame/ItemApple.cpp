@@ -1,4 +1,5 @@
 #include "ItemApple.h"
+#include <iostream>
 
 
 ItemApple::ItemApple() : Item("Apple", "apple", "It's an apple... Need I say more?")
@@ -7,5 +8,6 @@ ItemApple::ItemApple() : Item("Apple", "apple", "It's an apple... Need I say mor
 
 void ItemApple::Use()
 {
-
+	std::cout << "Tasted pretty good...\n";
+	system("PAUSE");
 }

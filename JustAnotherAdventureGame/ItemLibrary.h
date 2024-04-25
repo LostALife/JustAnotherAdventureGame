@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include "Item.h"
-#include "ItemApple.h"
 
 class ItemLibrary
 {
@@ -15,7 +14,8 @@ public:
 	}
 
 public:
-	Item GetRandomItem();
+	Item* GetRandomItem();
+	Item* InstantiateItemOfType(String _type);
 
 private:
 	std::vector<Item*> m_itemList;

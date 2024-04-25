@@ -21,7 +21,7 @@ const std::vector<InventoryItem*> InventoryManager::getInventoryList()
 }
 
 // Adds a new item to the inventory.
-InventoryManager& InventoryManager::AddNewItem(const InventoryItem& _inventoryItem)
+InventoryManager& InventoryManager::AddNewItem(InventoryItem& _inventoryItem)
 {
 	InventoryItem* searchResult = GetInventoryItem(*_inventoryItem.item);
 	if (searchResult == nullptr) {
@@ -34,27 +34,9 @@ InventoryManager& InventoryManager::AddNewItem(const InventoryItem& _inventoryIt
 	return *this;
 }
 
-// Adds a random item to the inventory.
-InventoryManager& InventoryManager::AddRandomItem()
-{
-	ItemLibrary itemLibrary;
-	Item newItem = itemLibrary.GetRandomItem();
-
-	InventoryItem* searchResult = GetInventoryItem(newItem);
-	if (searchResult == nullptr) {
-		InventoryItem newInventoryItem = InventoryItem(newItem, 1);
-		m_items.push_back(&newInventoryItem);
-	}
-	else {
-		searchResult->countInInventory += 1;
-	}
-
-	return *this;
-}
-
 // Removes one or more of an item from the inventory.
 // Attempting to remove more of an item than exists in the inventory removes all of the specified item from the inventory.
-InventoryManager& InventoryManager::RemoveItem(const Item& _item, const unsigned int _numToRemove)
+InventoryManager& InventoryManager::RemoveItemOfType(const Item& _item, const unsigned int _numToRemove)
 {
 	InventoryItem* searchResult = GetInventoryItem(_item);
 	if (searchResult != nullptr) {
@@ -93,15 +75,17 @@ InventoryManager& InventoryManager::PrintInventoryToConsole()
 	return *this;
 }
 
-InventoryItem::InventoryItem(const Item& _other, const unsigned int _count)
+InventoryItem::InventoryItem(Item* _other, const unsigned int _count)
 {
-	item = new Item(_other);
+	ItemLibrary itemLibrary;
+	item = itemLibrary.InstantiateItemOfType(_other->getType());
 	countInInventory = _count;
 }
 
-InventoryItem::InventoryItem(const InventoryItem& _inventoryItem)
+InventoryItem::InventoryItem(InventoryItem& _inventoryItem)
 {
-	item = new Item(*_inventoryItem.item);
+	ItemLibrary itemLibrary;
+	item = itemLibrary.InstantiateItemOfType(_inventoryItem.item->getType());
 	countInInventory = _inventoryItem.countInInventory;
 }
 

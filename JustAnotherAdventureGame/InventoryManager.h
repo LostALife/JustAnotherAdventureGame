@@ -1,10 +1,11 @@
 #pragma once
 #include <vector>
 #include "Item.h"
+#include "ItemLibrary.h"
 
 struct InventoryItem {
-	InventoryItem(const Item& _other, const unsigned int _count);
-	InventoryItem(const InventoryItem& _inventoryItem);
+	InventoryItem(Item* _other, const unsigned int _count);
+	InventoryItem(InventoryItem& _inventoryItem);
 	~InventoryItem();
 
 	Item* item;
@@ -19,7 +20,8 @@ struct InventoryItem {
 	}
 
 	InventoryItem& operator=(const InventoryItem& _other) {
-		item = new Item(*_other.item);
+		ItemLibrary itemLibrary;
+		item = itemLibrary.InstantiateItemOfType(_other.item->getType());
 		countInInventory = _other.countInInventory;
 	}
 };
@@ -33,9 +35,8 @@ public:
 	const std::vector<InventoryItem*> getInventoryList();
 
 public:
-	InventoryManager& AddNewItem(const InventoryItem& _inventoryItem);
-	InventoryManager& AddRandomItem();
-	InventoryManager& RemoveItem(const Item& _item, const unsigned int _numToRemove);
+	InventoryManager& AddNewItem(InventoryItem& _inventoryItem);
+	InventoryManager& RemoveItemOfType(const Item& _item, const unsigned int _numToRemove);
 
 	InventoryManager& PrintInventoryToConsole();
 

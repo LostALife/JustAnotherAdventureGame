@@ -1,4 +1,5 @@
 #include "Room.h"
+#include "ItemLibrary.h"
 
 Room::Room() : m_roomName("room"), m_roomPosition(0,0), m_roomType(RoomType::Normal), m_roomExits(RoomExits{false,false,false,false})
 {
@@ -20,9 +21,15 @@ Room::~Room()
 	}
 }
 
-Room& Room::AddItem(const Item& _item)
+Room& Room::OnEntry()
 {
-	Item* newItem = new Item(_item);
+	return *this;
+}
+
+Room& Room::AddItem(Item& _item)
+{
+	ItemLibrary itemLibrary;
+	Item* newItem = itemLibrary.InstantiateItemOfType(_item.getType());
 	m_roomItems.push_back(newItem);
 
 	return *this;

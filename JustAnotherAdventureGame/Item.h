@@ -5,6 +5,7 @@ class Item
 {
 public:
 	Item();
+	Item(const Item& _item);
 	Item(const String& _displayName, const String& _itemType, const String& _itemDescription);
 
 public:
@@ -14,6 +15,10 @@ public:
 
 	String getDescription() {
 		return m_itemDescription;
+	}
+
+	String getType() {
+		return m_itemType;
 	}
 
 public:

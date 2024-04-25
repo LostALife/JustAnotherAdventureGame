@@ -57,11 +57,11 @@ readInput:
 			goto readInput;
 		}
 	}
-	else if (m_playerInput == "drop") {
+	else if (m_playerInput == "inventory") {
 		if (m_invManager.getInventoryList().size() > 0)
-			PrintAndHandleDrop();
+			PrintAndHandleInventory();
 		else {
-			std::cout << "You don't have any items to drop...\n\n";
+			std::cout << "You don't have any items...\n\n";
 			goto readInput;
 		}
 	}
@@ -93,8 +93,13 @@ int GameManager::Move(MoveDirection _direction)
 		return -1;
 
 	Room* result = m_roomManager.GenerateNewRoom(m_currentRoom->getRoomPosition() + positionOffset);
-	if (result != nullptr) 
+	if (result != nullptr) {
 		m_currentRoom = result;
+		if (m_currentRoom->getRoomType() == RoomType::BossChamber)
+			m_canExitRoom = false;
+		else
+			m_canExitRoom = true;
+	}
 
 	system("CLS");
 
@@ -153,7 +158,7 @@ void GameManager::PrintCommands()
 	std::cout << "Commands:\n";
 	std::cout << "Moving: <up, right, down, left>\n";
 	std::cout << "Pickup Item: <pickup>\n";
-	std::cout << "Drop Item: <drop>\n";
+	std::cout << "Access Inventory: <inventory>\n";
 	std::cout << '\n';
 
 	system("Pause");
@@ -187,7 +192,9 @@ void GameManager::PrintAndHandlePickup()
 
 	int selection = m_playerInput.StringToInt();
 	if (selection > 0 && selection <= m_currentRoom->getRoomItems().size()) {
-		InventoryItem newItem = InventoryItem(*m_currentRoom->getRoomItems()[selection - 1], 1);
+		ItemLibrary itemLibrary;
+		Item* item = itemLibrary.InstantiateItemOfType(m_currentRoom->getRoomItems()[selection - 1]->getType());
+		InventoryItem newItem(item, 1);
 		m_invManager.AddNewItem(newItem);
 		m_currentRoom->RemoveItem(*newItem.item);
 	}
@@ -199,7 +206,7 @@ void GameManager::PrintAndHandlePickup()
 	PrintAndHandlePickup();
 }
 
-void GameManager::PrintAndHandleDrop()
+void GameManager::PrintAndHandleInventory()
 {
 	system("CLS");
 	std::cout << "<- Type 'back' to go back...\n\n";
@@ -210,24 +217,75 @@ void GameManager::PrintAndHandleDrop()
 		std::cout << "(" << i + 1 << ") " << inventoryItem->item->getDisplayName().CStr() << " x " << inventoryItem->countInInventory << '\n';
 	}
 
-	std::cout << "\nSelect an item to drop by typing its number:\n";
+	std::cout << "\nSelect an item by typing its number:\n";
 
-	getInput:
+getInput:
 	m_playerInput.ReadFromConsole().ToLower().Trim();
 
 	if (m_playerInput == "back") {
 		return;
 	}
+	else if (m_playerInput.StringToInt() > 0 && m_playerInput.StringToInt() <= m_invManager.getInventoryList().size()) {
+		PrintItemOptions(m_playerInput.StringToInt() - 1);
+	}
+}
 
-	int selection = m_playerInput.StringToInt();
-	if (selection > 0 && selection <= m_invManager.getInventoryList().size()) {
-		m_currentRoom->AddItem(*m_invManager.getInventoryList()[selection - 1]->item);
-		m_invManager.RemoveItem(*m_invManager.getInventoryList()[selection - 1]->item, 1);
+void GameManager::PrintItemOptions(const int _inventoryItemIndex)
+{
+	if (_inventoryItemIndex < 0 || _inventoryItemIndex >= m_invManager.getInventoryList().size())
+		return;
+
+	InventoryItem* searchResult = m_invManager.getInventoryList()[_inventoryItemIndex];
+
+	if (searchResult == nullptr) {
+		std::cout << "Item doesn't exist!";
+		system("PAUSE");
+		PrintAndHandleInventory();
+
+		return;
+	}
+
+	system("CLS");
+	std::cout << searchResult->item->getDisplayName().CStr() << " (" << searchResult->countInInventory << ")" << '\n';
+	std::cout << searchResult->item->getDescription().CStr() << '\n';
+	std::cout << "\nType 'Drop', 'Use' or 'Back' to continue...\n";
+
+getInput:
+	m_playerInput.ReadFromConsole().Trim().ToLower();
+
+	if (m_playerInput == "back") {
+		PrintAndHandleInventory();
+		return;
+	}
+	else if (m_playerInput == "use") {
+		if (m_invManager.getInventoryList()[_inventoryItemIndex]->countInInventory == 1) {
+			m_invManager.RemoveItemOfType(*searchResult->item, 1);
+			searchResult->item->Use();
+			PrintAndHandleInventory();
+		}
+		else {
+			m_invManager.RemoveItemOfType(*searchResult->item, 1);
+			searchResult->item->Use();
+			PrintItemOptions(_inventoryItemIndex);
+		}
+		
+		return;
+	}
+	else if (m_playerInput == "drop") {
+		m_currentRoom->AddItem(*m_invManager.getInventoryList()[_inventoryItemIndex]->item);
+		if (m_invManager.getInventoryList()[_inventoryItemIndex]->countInInventory == 1) {
+			m_invManager.RemoveItemOfType(*searchResult->item, 1);
+			PrintAndHandleInventory();
+		}
+		else {
+			m_invManager.RemoveItemOfType(*searchResult->item, 1);
+			PrintItemOptions(_inventoryItemIndex);
+		}
+		
+		return;
 	}
 	else {
-		std::cout << "No item exists...\n\n";
+		std::cout << "No command exists...\n\n";
 		goto getInput;
 	}
-
-	PrintAndHandleDrop();
 }

@@ -28,7 +28,9 @@ public:
 	~Room();
 
 public:
-	Room& AddItem(const Item& _item);
+	virtual Room& OnEntry();
+
+	Room& AddItem(Item& _item);
 	Room& RemoveItem(const Item& _item);
 
 public:
