@@ -1,10 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\JustAnotherAdventureGame\\",
+  "WorkspaceRootPath": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemLibrary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemSword.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemSword.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemDonut.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemDonut.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\InventoryManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\InventoryManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\GameManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\Item.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\Room.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\RoomManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\Room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\RoomManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\ItemLibrary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\String.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\String.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\GameManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8622FA98-78B4-430A-845E-B97F1F1C2527}|JustAnotherAdventureGame\\JustAnotherAdventureGame.vcxproj|solutionrelative:JustAnotherAdventureGame\\Vector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +98,261 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JustAnotherAdventureGame.cpp",
-              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
-              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
-              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\Visual Studio Projects\\AIE\\Programming Year 1 - 2024\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
-              "RelativeToolTip": "JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "DocumentIndex": 1,
+              "Title": "ItemSword.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemSword.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemSword.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-25T03:50:33.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItemDonut.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemDonut.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemDonut.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-25T02:01:01.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "String.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\String.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\String.h",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-23T07:45:41.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Vector2.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Vector2.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\Vector2.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Vector2.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\Vector2.h",
+              "ViewState": "AQIAADUAAAAAAAAAAAAgwEgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-23T07:45:40.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Room.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\Room.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\Room.h",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T11:02:41.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RoomManager.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\RoomManager.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\RoomManager.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T10:47:19.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Item.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\Item.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\Item.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T07:12:04.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InventoryManager.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\InventoryManager.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\InventoryManager.h",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAYwCYAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T06:58:11.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ItemLibrary.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemLibrary.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemLibrary.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T06:57:42.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GameManager.h",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.h",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\GameManager.h",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.h",
+              "RelativeToolTip": "JustAnotherAdventureGame\\GameManager.h",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwC0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-11T10:58:37.914Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemSword.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemSword.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemSword.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemSword.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-27T11:40:02.34Z",
+              "WhenOpened": "2024-04-25T03:50:51.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ItemDonut.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemDonut.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemDonut.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemDonut.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-25T02:00:51.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "String.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\String.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\String.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\String.cpp",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAGYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-25T02:22:42.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Room.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\Room.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Room.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\Room.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T11:02:38.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoomManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\RoomManager.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\RoomManager.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\RoomManager.cpp",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowLUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T10:47:14.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Item.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\Item.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\Item.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\Item.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T07:19:16.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InventoryManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\InventoryManager.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\InventoryManager.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\InventoryManager.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T06:59:03.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ItemLibrary.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\ItemLibrary.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\ItemLibrary.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\ItemLibrary.cpp",
+              "ViewState": "AQIAAAIAAAAAAAAAAADwvyAAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-11T06:57:38.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GameManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\GameManager.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\GameManager.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\GameManager.cpp",
+              "ViewState": "AQIAAO8AAAAAAAAAAAAYwAkBAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-13T03:12:06.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JustAnotherAdventureGame.cpp",
+              "DocumentMoniker": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
+              "RelativeDocumentMoniker": "JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
+              "ToolTip": "C:\\Users\\Bradon\\Documents\\My Documents\\AIE\\Advanced Diploma in Game Development\\Year 1\\Introduction to C\u002B\u002B\\Visual Studio Projects\\JustAnotherAdventureGame\\JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
+              "RelativeToolTip": "JustAnotherAdventureGame\\JustAnotherAdventureGame.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-12T09:27:30.333Z",
               "EditorCaption": ""
             }
           ]
